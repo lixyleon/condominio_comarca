@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* paleta de colores*/
+:root{
+    --color1:#2079fc;
+    --color2:#7cb4fc;
+    --color3: #013582;
+    --color4:#8c8d90;
+    --color5: #a3b2c6;
+}
