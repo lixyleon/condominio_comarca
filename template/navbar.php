@@ -23,7 +23,7 @@
             <a class="nav-link active text-light fs-5" aria-current="page" href="index.php">Inicio</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link active text-light fs-5" href="#">Servicios</a>
+            <a class="nav-link active text-light fs-5" href="#section-demo">Servicios</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active text-light fs-5" href="#">Nosotros</a>

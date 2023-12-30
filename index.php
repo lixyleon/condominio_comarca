@@ -99,16 +99,78 @@ include('template/navbar.php')
     </div>
 </div>
 <div class="container-fluid" id="section-demo">
-
 </div>
-<div class="container-fluid" id="section-servicios">
-    
+<!-- efecto hover para card de boostrap section services -->
+<style>
+    .services:hover{
+        transform: scale(1.1);
+        background: linear-gradient(#a3b2c6,#7cb4fc);
+    }
+    .services{
+        transition: transform .5s;
+    }
+</style>
+
+<div class="container-fluid mt-3" id="section-services">
+    <div class="container">
+        <h2 class="text-center text-primary">Conoce nuestros microservicios</h2>
+        <p class="text-center fw-bold fs-4 text-body-secondary"> Servicios adicionales que puede contratar de forma esporádica o continua. </p>
+
+        <p class="text-center fs-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias voluptatibus molestias dignissimos exercitationem voluptates nisi, doloribus accusantium aspernatur, aperiam, quos unde beatae eum iste ab esse minus dicta rerum numquam.</p>
+
+        <div class="row">
+            <div class="card mb-3 mt-3 services">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-4">
+                        <img src="images/factura-linea-pago-facturas-casa-procesamiento-3d.jpg" class="img-fluid rounded-start" class="card-img-top" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title fs-3">Gestión de Cobranzas</h5>
+                            <p class="card-text fs-4">Realizamos la gestión de cobranzas, con reportes actualizados según sus necesidades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="card mb-3 mt-3 services">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-8 ">
+                        <div class="card-body ">
+                            <h5 class="card-title fs-3">Informe de gestión</h5>
+                            <p class="card-text fs-4">Elaboraremos el informe de gestión con los datos de los ingresos y gastos cargados en el sistema, para el período y con la frecuencia que requiera. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/primer-plano-manos-boligrafo.jpg" class="img-fluid rounded-start" class="card-img-top" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card mb-3 mt-3 services">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-4">
+                        <img src="images/primer-plano-manos-contador-contando-calculadora.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title fs-3">Conciliación de pagos</h5>
+                            <p class="card-text fs-4">Realizamos la conciliación de pagos registrados en el sistema por los propietarios, los pagos registrados por los administradores del condominio y el estado de cuenta bancaria del condominio.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="container-fluid" id="section-nosotros">
-    
+
 </div>
 <div class="container-fluid" id="section-contáctanos">
-    
+
 </div>
 
 <br><br><br><br>
@@ -119,7 +181,11 @@ include('template/navbar.php')
 
 
 
+<!-- <a href="https://www.freepik.es/foto-gratis/factura-linea-pago-facturas-casa-procesamiento-3d_35037982.htm#query=cobranza&position=3&from_view=search&track=sph&uuid=ebc9f485-0620-4fea-9ea2-007112e65461">Imagen de upklyak</a> en Freepik
 
+<a href="https://www.freepik.es/foto-gratis/primer-plano-manos-contador-contando-calculadora_1121888.htm#query=cobranza&position=9&from_view=search&track=sph&uuid=ff0f9673-6e4d-43ea-8245-5846eb8b3c01">Imagen de katemangostar</a> en Freepik
+
+<a href="https://www.freepik.es/foto-gratis/primer-plano-manos-boligrafo_863269.htm#query=reporte&position=18&from_view=search&track=sph&uuid=272ab67e-949f-4cec-8c78-3e3884ec3735">Imagen de pressfoto</a> en Freepik-->
 
 
 
