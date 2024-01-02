@@ -34,13 +34,12 @@ CREATE TABLE `parroquia` (
 );
 
 CREATE TABLE `edificio` (
-  `id` INT AUTO_INCREMENT,
+  `id` INT PRIMARY KEY AUTO_INCREMENT,
   `nombre` VARCHAR(100),
   `direccion` VARCHAR(300),
   `id_estado` INT,
   `id_municipio` INT,
   `id_parroquia` INT,
-  PRIMARY KEY (`id`),
   FOREIGN KEY (`id_estado`) REFERENCES `Entidad`(`id`),
   FOREIGN KEY (`id_municipio`) REFERENCES `Municipio`(`id`),
   FOREIGN KEY (`id_parroquia`) REFERENCES `Parroquia`(`id`)
@@ -68,9 +67,17 @@ CREATE TABLE `Propietarios` (
   `id_tipo_persona` INT,
   `id_tipo_propietario` INT,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`id_tipo_persona`) REFERENCES `Tipo_persona`(`id`),
-  FOREIGN KEY (`id_tipo_propietario`) REFERENCES `Tipo_propietario`(`id`)
+   FOREIGN KEY (`id_edificio`) REFERENCES `edificio`(`id`),
+  FOREIGN KEY (`id_tipo_persona`) REFERENCES `tipo_persona`(`id`),
+  FOREIGN KEY (`id_tipo_propietario`) REFERENCES `tipo_propietario`(`id`)
 );
+
+CREATE TABLE `Tipo_moneda` (
+  `id` INT AUTO_INCREMENT,
+  `nombre` VARCHAR(20),
+  PRIMARY KEY (`id`)
+);
+
 
 CREATE TABLE `Tipo_operacion` (
   `id` INT AUTO_INCREMENT,
@@ -110,7 +117,10 @@ CREATE TABLE `Pagos_propietarios` (
 CREATE TABLE `proveedor` (
   `id` INT AUTO_INCREMENT,
   `nombre` VARCHAR(40),
+   `id_tipo_persona` INT,
+   `identificacion` VARCHAR(9),
   PRIMARY KEY (`id`)
+  FOREIGN KEY (`id_tipo_persona`) REFERENCES `tipo_persona`(`id`)
 );
 
 CREATE TABLE `categoria_gasto` (
@@ -126,7 +136,7 @@ CREATE TABLE `gastos_edificio` (
   `fecha_registro` DATE,
   `id_proveedor` INT,
   `monto` INT,
-  `descripcion` VARCHAR(300),
+  `descripcion` VARCHAR(500),
   PRIMARY KEY (`id`),
   FOREIGN KEY (`id_proveedor`) REFERENCES `proveedor`(`id`),
   FOREIGN KEY (`id_categoria_gasto`) REFERENCES `categoria_gasto`(`id`)
@@ -144,4 +154,10 @@ CREATE TABLE `estado_cuenta_bancaria` (
   `Ruta` VARCHAR(100),
   PRIMARY KEY (`id`),
   FOREIGN KEY (`id_mes`) REFERENCES `mes`(`id`)
+);
+
+CREATE TABLE `anio` (
+  `id` INT AUTO_INCREMENT,
+  `nombre` VARCHAR(20),
+  PRIMARY KEY (`id`)
 );
