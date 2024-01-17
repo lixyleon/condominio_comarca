@@ -6,7 +6,7 @@
 
     include("../../config/bd.php");
     $id=$_GET['id'];
-    $sentencia = $conexion->prepare("DELETE FROM edificio WHERE id=?;");
+    $sentencia = $conexion->prepare("DELETE FROM propietarios WHERE id=?;");
     $resultado = $sentencia->execute([$id]);
 
     if ($resultado===TRUE) {
