@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 
@@ -39,7 +40,7 @@
               <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
             </svg>
           </i>
-          <a class="navbar-brand text-light  fs-5" href="inicio.php">Iniciar Sesión</a>
+          <a class="navbar-brand text-light  fs-5" href="http://localhost/condominio_comarca/admin/index.php">Iniciar Sesión</a>
         </div>
 
       </div>
